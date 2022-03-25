@@ -8,12 +8,44 @@
     }
 }
 
+@keyframes wiggle {
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
 body {
+    animation: fadein 2s;
+    background-image: url('./pictures/gear.svg');
+    background-repeat: no-repeat;
+    background-size: 40% 70%;
+    background-attachment: fixed;
+    background-position: right bottom;
     background-color: rgb(39, 39, 39);
+    text-align-last: middle;
     color: azure;
     text-align: center;
     font-family: 'Varela Round', sans-serif;
-    animation: fadein 2s;
 }
 
 a:link {
@@ -32,15 +64,35 @@ a:hover {
 
 .content {
     font-size: 1.4em;
-    padding: 1%;
-    text-align-last: left;
-    border-radius: 3%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#main {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     display: inline-block;
-    background-color: rgb(61, 61, 61);
+    padding: 1%;
 }
 
 #nav {
-    margin-left: 1%;
+    margin: 2%;
     position: absolute;
+}
+
+#nav img:hover {
+    background-color: white;
+    border-radius: 50%;
+}
+
+#nav:hover {
+    animation: wiggle 2s linear infinite;
+}
+
+.glitch {
+    font-size: 3em;
+    display: flexbox;
 }

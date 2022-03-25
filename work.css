@@ -9,6 +9,11 @@
 }
 
 body {
+    background-image: url('./pictures/code.svg');
+    background-repeat: no-repeat;
+    background-size: 30% 50%;
+    background-attachment: fixed;
+    background-position: left bottom;
     background-color: rgb(39, 39, 39);
     color: azure;
     font-size: 4em;
@@ -32,8 +37,5 @@ a:hover {
 }
 
 .content {
-    width: auto;
-    height: auto;
-    background-color: rgb(61, 61, 61);
-    text-align: justify;
+    position: absolute;
 }
