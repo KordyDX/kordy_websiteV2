@@ -8,6 +8,32 @@
     }
 }
 
+@keyframes wiggle {
+    0%,
+    7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%,
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
 body {
     background-color: rgb(39, 39, 39);
     color: azure;
@@ -35,7 +61,7 @@ a:hover {
     margin-top: 10vh;
 }
 
-.pages {
+.content {
     margin-top: 10vh;
     display: inline-block;
     font-size: 0.5em;
@@ -45,4 +71,18 @@ a:hover {
 .links img:hover {
     transition: filter 0.1s ease-in-out;
     filter: blur(1px);
+}
+
+#nav {
+    margin: 2%;
+    position: absolute;
+}
+
+#nav img:hover {
+    background-color: white;
+    border-radius: 50%;
+}
+
+#nav:hover {
+    animation: wiggle 2s linear infinite;
 }
