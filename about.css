@@ -35,7 +35,7 @@
 }
 
 body {
-    animation: fadein 2s;
+    animation: fadein 1s;
     background-image: url('./pictures/gear.svg');
     background-repeat: no-repeat;
     background-size: 40% 70%;
